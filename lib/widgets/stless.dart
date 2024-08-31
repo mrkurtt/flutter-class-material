@@ -5,12 +5,23 @@ class AppTitleAndIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text(
-      'Beaulink',
-      style: TextStyle(
-          color: Colors.pinkAccent,
-          fontSize: 50.0,
-          fontWeight: FontWeight.w600),
+    return Row(
+      children: [
+        Image.asset(
+          'assets/images/beaulink-logo.png',
+          height: 60.0,
+          width: 60.0,
+        ),
+        const Text(
+          'Beaulink',
+          style: TextStyle(
+              color: Colors.pinkAccent,
+              fontSize: 50.0,
+              fontFamily: 'Nunito',
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.bold),
+        ),
+      ],
     );
   }
 }

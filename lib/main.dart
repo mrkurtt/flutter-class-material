@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:beaulink/widgets/session2.dart';
 import 'package:beaulink/widgets/stful.dart';
 import 'package:beaulink/widgets/stless.dart';
 import 'package:flutter/material.dart';
@@ -87,101 +88,9 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Colors.redAccent,
           foregroundColor: Colors.white,
         ),
-        body: Center(
-          child: Container(
-            child: Column(
-              children: [
-                AppTitleAndIcon(),
-                MyStatefulWidget(),
-                Text(
-                  "Hello world",
-                  style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  "you are beautiful",
-                  style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  "Hello world",
-                  style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  "Hello world",
-                  style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
-                ),
-                Column(
-                  children: const [
-                    Text(
-                      "Nested item 1",
-                      style: TextStyle(
-                          fontSize: 20.0, fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      "Nested item 2",
-                      style: TextStyle(
-                          fontSize: 20.0, fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      "Nested item",
-                      style: TextStyle(
-                          fontSize: 20.0, fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: const [
-                    Text(
-                      "Row item 1",
-                      style: TextStyle(
-                          fontSize: 15.0, fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(
-                      width: 100.0,
-                      child: Text('inside box'),
-                    ),
-                    Text(
-                      "Row item 2",
-                      style: TextStyle(
-                          fontSize: 15.0, fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(18.0),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(18.0),
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                              hintText: 'Please enter your first name'),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(32.0),
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                              hintText: 'Please enter your last name'),
-                        ),
-                      ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                            hintText: 'Please enter your last name'),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 30.0),
-                        child: ElevatedButton(
-                            onPressed: () {
-                              print('button clicked');
-                            },
-                            child: Text("Submit")),
-                      )
-                    ],
-                  ),
-                )
-              ],
-            ),
-          ),
+        body: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
+          child: Session2(),
         ));
   }
 }
