@@ -32,8 +32,7 @@ class _Step2State extends State<Step2> {
                       child: const Text('Back')),
                   ElevatedButton(
                       onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => const Step3()));
+                        Navigator.pushNamed(context, '/signup/step-3');
                       },
                       child: const Text('Proceed'))
                 ],

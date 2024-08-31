@@ -1,25 +1,25 @@
-import 'package:beaulink/screens/signup/step2.dart';
+import 'package:beaulink/screens/signup/step3.dart';
 import 'package:flutter/material.dart';
 
-class Step1 extends StatefulWidget {
-  const Step1({super.key});
+class Step4 extends StatefulWidget {
+  const Step4({super.key});
 
   @override
-  State<Step1> createState() => _Step1State();
+  State<Step4> createState() => _Step4State();
 }
 
-class _Step1State extends State<Step1> {
+class _Step4State extends State<Step4> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       // appBar: AppBar(
-      //   title: Text('Sign Up Step 1'),
+      //   title: Text('Sign Up Step 2'),
       // ),
       body: SafeArea(
         child: Center(
           child: Column(
             children: [
-              Text('Sign up here, step 1'),
+              Text('Sign up here, step 4'),
               Text('input here'),
               Text('input here'),
               Row(
@@ -32,9 +32,9 @@ class _Step1State extends State<Step1> {
                       child: const Text('Back')),
                   ElevatedButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, '/signup/step-2');
+                        Navigator.popAndPushNamed(context, '/signup/step-1');
                       },
-                      child: const Text('Proceed'))
+                      child: const Text('Pop and Push'))
                 ],
               ),
             ],
