@@ -1,4 +1,3 @@
-import 'package:beaulink/screens/signup/step2.dart';
 import 'package:flutter/material.dart';
 
 class Step1 extends StatefulWidget {
@@ -19,9 +18,9 @@ class _Step1State extends State<Step1> {
         child: Center(
           child: Column(
             children: [
-              Text('Sign up here, step 1'),
-              Text('input here'),
-              Text('input here'),
+              const Text('Sign up here, step 1'),
+              const Text('input here'),
+              const Text('input here'),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
