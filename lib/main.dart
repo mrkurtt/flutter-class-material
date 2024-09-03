@@ -1,5 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:beaulink/constants/screens/loading_screen.dart';
+import 'package:beaulink/features/auth/screens/auth_landing.dart';
+import 'package:beaulink/features/auth/screens/login.dart';
 import 'package:beaulink/screens/signup/step1.dart';
 import 'package:beaulink/screens/signup/step2.dart';
 import 'package:beaulink/screens/signup/step3.dart';
@@ -23,9 +26,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      initialRoute: '/',
+      initialRoute: '/auth/landing',
       routes: {
         '/': (context) => const Session3(),
+        '/loading': (context) => LoadingScreen(),
+        '/auth/landing': (context) => AuthLanding(),
+        '/auth/login': (context) => LoginScreen(),
         '/signup/step-1': (context) => const Step1(),
         '/signup/step-2': (context) => const Step2(),
         '/signup/step-3': (context) => const Step3(),
